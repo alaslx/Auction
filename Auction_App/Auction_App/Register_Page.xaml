@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Auction_App.Register_Page">
+    <ContentPage.Content >
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="5"
+                     Margin="5">
+            <StackLayout Spacing="10" >
+                <Entry Placeholder="First Name"></Entry>
+                <Entry Placeholder="Last Name"></Entry>
+                <Entry Placeholder="Email"></Entry>
+            </StackLayout>
+
+            <StackLayout Margin="5" Spacing="10">
+                <Entry Placeholder="Password" IsPassword="{Binding Source={Reference switch_password},Path=IsToggled}" />
+                <Entry Placeholder="Confirm Password" IsPassword="{Binding Source={Reference switch_password},Path=IsToggled}" />
+                <Label Text="Hide Passwrod"/>
+                <Switch IsToggled="False" x:Name="switch_password" />
+            </StackLayout>
+            <Label Text="Date Of Birth"></Label>
+            <DatePicker></DatePicker>
+
+
+            <Button Text="Sign Up" BackgroundColor="DodgerBlue" TextColor="White"  Clicked="Register_Button" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

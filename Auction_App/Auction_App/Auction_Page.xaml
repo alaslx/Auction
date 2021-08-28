@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Auction_App.Auction_Page">
+    <ContentPage.Content>
+        <StackLayout Spacing="25">
+            <Label Text="Welcome  {name}" FontSize="25" x:Name="Welcome_Label" HorizontalOptions="CenterAndExpand" />
+            <Label  x:Name="Balance_label" Text="Balance:" FontSize="20"/>
+            <Label Text="" x:Name="Won_Items" FontSize="20"/>
+
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Fill" Spacing="25">
+
+
+                <Label x:Name="item_name" FontSize="25"/>
+                <Label x:Name="item_price" FontSize="25"/>
+                <Label x:Name="item_own" FontSize="25"/>
+                <Label x:Name="MoneyReserve" FontSize="25"/>
+                <Label Text="" x:Name="Counter1" FontSize="25"/>
+
+                <ImageButton  Clicked="Button_Clicked" 
+                              x:Name="bid_button" 
+                              BackgroundColor="White" 
+                              WidthRequest="50" HeightRequest="50"
+                              Source="https://static.thenounproject.com/png/2370794-200.png"  />
+
+
+                <ImageButton  Clicked="Money_Button" 
+                              x:Name="money_button" 
+                              BackgroundColor="White" 
+                              WidthRequest="50" HeightRequest="50"  
+                              IsVisible="false"
+                              Source="https://img.icons8.com/pastel-glyph/64/000000/add-money.png" />
+
+
+            </StackLayout>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage> 
